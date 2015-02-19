@@ -3,7 +3,8 @@
 <br>
 ###Introduction
 ----
-This bear is for the good maptimers in California, where the bear lurks.
+This bear is for the good maptimers in California, where the bear lurks.<br>
+<a href="http://maptimela.github.io/maptime_bear/">See what the bear is up to...</a>
 ###Tools Used
 ----
 * Sketchup
