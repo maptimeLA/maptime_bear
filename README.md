@@ -15,4 +15,5 @@ This bear is for the good maptimers in California, where the bear lurks.<br>
 * Be posable
 * Growl
 * Screenshot button
+* Visit his cousins (other maptime bears)
 
