@@ -12,7 +12,9 @@
 <script src="js/ColladaLoader.js"></script>
 <script src="js/OrbitControls.js"></script>
  
-
+<div>
+<img src="/images/maptimelalogo.png" style="width:25%; position:absolute; padding:25px">
+</div>
 <script>
     
 //Initializes three.js    
@@ -27,8 +29,8 @@ renderer = new THREE.WebGLRenderer({antialias:true});
 renderer.setSize(WIDTH, HEIGHT);
 renderer.setClearColor( 0xffffff, 1);    
 document.body.appendChild(renderer.domElement);
-camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 0.1, 10000);
-camera.position.set(50,150,100);
+camera = new THREE.PerspectiveCamera(35, WIDTH / HEIGHT, 0.1, 10000);
+camera.position.set(-16.08,17.27,81.59);    
 scene.add(camera);
 window.addEventListener('resize', function() {
 var WIDTH = window.innerWidth,
@@ -99,7 +101,7 @@ scene.add(axes);
   
 var gridXZ = new THREE.GridHelper(100, 10);
 gridXZ.setColors( new THREE.Color(0x8f8f8f), new THREE.Color(0x8f8f8f) );
-gridXZ.position.set(0,0,0 );
+gridXZ.position.set(0,0,0);
 scene.add(gridXZ);
 });
 
