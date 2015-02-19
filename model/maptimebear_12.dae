@@ -4,8 +4,8 @@
         <contributor>
             <authoring_tool>SketchUp 15.1.106</authoring_tool>
         </contributor>
-        <created>2015-02-19T09:23:26Z</created>
-        <modified>2015-02-19T09:23:26Z</modified>
+        <created>2015-02-19T09:29:19Z</created>
+        <modified>2015-02-19T09:29:19Z</modified>
         <unit meter="0.0254" name="inch" />
         <up_axis>Z_UP</up_axis>
     </asset>
@@ -9701,7 +9701,7 @@
         </geometry>
     </library_geometries>
     <library_materials>
-        <material id="ID4" name="_4">
+        <material id="ID4" name="California">
             <instance_effect url="#ID5" />
         </material>
         <material id="ID13" name="Color_000">
@@ -9740,7 +9740,7 @@
         <material id="ID1082" name="material_2">
             <instance_effect url="#ID1083" />
         </material>
-        <material id="ID1090" name="_5">
+        <material id="ID1090" name="MaptimeScreen">
             <instance_effect url="#ID1091" />
         </material>
         <material id="ID1211" name="edge_color000255">
@@ -10029,10 +10029,10 @@
     </library_effects>
     <library_images>
         <image id="ID6">
-            <init_from>maptimebear_11/_4.jpg</init_from>
+            <init_from>maptimebear_12/California.jpg</init_from>
         </image>
         <image id="ID1092">
-            <init_from>maptimebear_11/_5.jpg</init_from>
+            <init_from>maptimebear_12/MaptimeScreen.jpg</init_from>
         </image>
     </library_images>
     <library_nodes>
