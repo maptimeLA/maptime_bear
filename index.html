@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+ 
+ 
+<title>Maptime Bear</title>
+<meta charset="utf-8">
+</head>
+<body style="margin: 0;">
+ 
+<script src="js/three.min.js"></script>
+<script src="js/ColladaLoader.js"></script>
+<script src="js/OrbitControls.js"></script>
+ 
+
+<script>
+    
+//Initializes three.js    
+var scene, camera, renderer, hemiLight;
+init();
+animate();
+function init() {
+scene = new THREE.Scene();
+var WIDTH = window.innerWidth,
+HEIGHT = window.innerHeight;
+renderer = new THREE.WebGLRenderer({antialias:true});
+renderer.setSize(WIDTH, HEIGHT);
+renderer.setClearColor( 0xffffff, 1);    
+document.body.appendChild(renderer.domElement);
+camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 0.1, 10000);
+camera.position.set(50,150,100);
+scene.add(camera);
+window.addEventListener('resize', function() {
+var WIDTH = window.innerWidth,
+HEIGHT = window.innerHeight;
+renderer.setSize(WIDTH, HEIGHT);
+camera.aspect = WIDTH / HEIGHT;
+camera.updateProjectionMatrix();
+});
+ 
+//Loads Lights
+hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 1 );
+hemiLight.color.setHSL( 0.6, 1, .65 );
+hemiLight.groundColor.setHSL( 0.095, 1, 0.75 );
+hemiLight.position.set( 0, 500, 0 );
+scene.add( hemiLight )    
+
+dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
+dirLight.color.setHSL( 0.1, 1, .8 );
+dirLight.position.set( 0, 1, 0 );
+dirLight.position.multiplyScalar( 50 );
+scene.add( dirLight );
+
+dirLight.castShadow = true;
+
+dirLight.shadowMapWidth = 2048;
+dirLight.shadowMapHeight = 2048;
+
+/*
+var light = new THREE.PointLight(0xfffff3, 0.8);    
+light.position.set(-100,200,100);
+scene.add(light);
+var sphereSize = 1;
+var pointLightHelper = new THREE.PointLightHelper( light, sphereSize );
+scene.add( pointLightHelper );
+    
+var light2 = new THREE.PointLight(0xd7f0ff, 0.2);
+light2.position.set(200,200,100);    
+scene.add(light2);
+var sphereSize = 1;
+var pointLightHelper2 = new THREE.PointLightHelper( light2, sphereSize );
+scene.add( pointLightHelper2 );
+    
+var light3 = new THREE.PointLight(0xFFFFFF, 1);
+light3.position.set(150,200,-100);
+scene.add(light3);
+var sphereSize = 1;
+var pointLightHelper3 = new THREE.PointLightHelper( light3, sphereSize );
+scene.add( pointLightHelper3 );
+*/    
+//Loads Bear from Collada, sketchup export with textures    
+var loader = new THREE.ColladaLoader();
+loader.options.convertUpAxis = true;
+
+//Insert dae file location here    
+loader.load( 'model/maptimebear_11.dae', function ( collada ) {
+var dae = collada.scene;
+var skin = collada.skins[ 0 ];
+dae.position.set(0,0,0);//x,z,y- if you think in blender dimensions ;)
+dae.scale.set(1.5,1.5,1.5);
+  
+scene.add(dae);
+
+    
+var axes = new THREE.AxisHelper(50);
+axes.position = dae.position;
+scene.add(axes);
+
+  
+var gridXZ = new THREE.GridHelper(100, 10);
+gridXZ.setColors( new THREE.Color(0x8f8f8f), new THREE.Color(0x8f8f8f) );
+gridXZ.position.set(0,0,0 );
+scene.add(gridXZ);
+});
+
+
+//Adds mouse controls    
+controls = new THREE.OrbitControls(camera, renderer.domElement);
+}
+function animate() {
+requestAnimationFrame(animate);
+renderer.render(scene, camera);
+controls.update();
+}
+</script>
+</body>
+</html> 
