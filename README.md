@@ -10,4 +10,9 @@ This bear is for the good maptimers in California, where the bear lurks.<br>
 * Sketchup
 * three.js
 
+###Things the bear should do
+----
+* Be posable
+* Growl
+* Screenshot button
 
