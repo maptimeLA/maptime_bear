@@ -25,12 +25,12 @@ function init() {
 scene = new THREE.Scene();
 var WIDTH = window.innerWidth,
 HEIGHT = window.innerHeight;
-renderer = new THREE.WebGLRenderer({antialias:true});
+renderer = new THREE.WebGLRenderer({antialias:true, preserveDrawingBuffer : true});
 renderer.setSize(WIDTH, HEIGHT);
 renderer.setClearColor( 0xffffff, 1);    
 document.body.appendChild(renderer.domElement);
 camera = new THREE.PerspectiveCamera(35, WIDTH / HEIGHT, 0.1, 10000);
-camera.position.set(-16.08,17.27,81.59);    
+camera.position.set(20,27.5,30);    
 scene.add(camera);
 window.addEventListener('resize', function() {
 var WIDTH = window.innerWidth,
@@ -88,18 +88,17 @@ loader.options.convertUpAxis = true;
 loader.load( 'model/maptimebear_12.dae', function ( collada ) {
 var dae = collada.scene;
 var skin = collada.skins[ 0 ];
-dae.position.set(0,0,0);//x,z,y- if you think in blender dimensions ;)
-dae.scale.set(1.5,1.5,1.5);
-  
+dae.position.set(20,0,-45);//x,z,y- if you think in blender dimensions ;)
+dae.scale.set(1.5,1.5,1.5); 
 scene.add(dae);
 
     
 var axes = new THREE.AxisHelper(50);
 axes.position = dae.position;
-scene.add(axes);
+//scene.add(axes);
 
   
-var gridXZ = new THREE.GridHelper(100, 10);
+var gridXZ = new THREE.GridHelper(10, 10);
 gridXZ.setColors( new THREE.Color(0x8f8f8f), new THREE.Color(0x8f8f8f) );
 gridXZ.position.set(0,0,0);
 scene.add(gridXZ);
