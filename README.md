@@ -29,4 +29,6 @@ Here are some very brief but soon to be detailed instructions<br><br>
 ![alt text](https://raw.githubusercontent.com/maptimeLA/maptime_bear/master/images/instructions/instructions-02.png "Step 1")
 ![alt text](https://raw.githubusercontent.com/maptimeLA/maptime_bear/master/images/instructions/instructions-03.png "Step 1")
 <br>
-Will update for export to three.js part of repo (2.22.2015)
+Will update for export to three.js part of repo (2.22.2015)<br>
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Maptime Bear</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="www.theworks.la" property="cc:attributionName" rel="cc:attributionURL">Omar Ureta</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/maptimeLA/maptime_bear" rel="dct:source">https://github.com/maptimeLA/maptime_bear</a>.
