@@ -28,3 +28,5 @@ Here are some very brief but soon to be detailed instructions<br><br>
 ![alt text](https://raw.githubusercontent.com/maptimeLA/maptime_bear/master/images/instructions/instructions-01.png "Step 1")
 ![alt text](https://raw.githubusercontent.com/maptimeLA/maptime_bear/master/images/instructions/instructions-02.png "Step 1")
 ![alt text](https://raw.githubusercontent.com/maptimeLA/maptime_bear/master/images/instructions/instructions-03.png "Step 1")
+<br>
+Will update for export to three.js part of repo (2.22.2015)
